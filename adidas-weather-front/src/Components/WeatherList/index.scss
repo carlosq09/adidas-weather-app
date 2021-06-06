@@ -1,0 +1,76 @@
+.weatherApp-list::-webkit-scrollbar {
+    display: none;
+}
+.weatherApp-list {
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    list-style: none;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    width: 40vw;
+    height: 100vh;
+    border: 1px solid lightgray;
+    box-sizing: border-box;
+    background: rgb(185, 185, 185);
+    background: linear-gradient(180deg, rgba(185, 185, 185, 1) 0%, rgba(34, 34, 34, 1) 100%);
+    -webkit-box-shadow: 2px 2px 14px rgba(0, 0, 0, 0.15);
+    box-shadow: 2px 2px 14px rgba(0, 0, 0, 0.15);
+
+    &__item {
+        color: #838383;
+        padding: 10px 30px;
+        border-radius: 5px;
+        margin: 3vh;
+        border-radius: 25px;
+        border: 1px solid lightgray;
+        transition: all 0.3s;
+        -webkit-box-shadow: 2px 2px 14px rgba(0, 0, 0, 0.15);
+        box-shadow: 2px 2px 14px rgba(0, 0, 0, 0.15);
+    }
+
+    &__head {
+        text-align: center;
+    }
+    &__main {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    &__item-time {
+        font-family: "Open Sans Condensed", sans-serif;
+        color: lightgray;
+        font-weight: 700;
+        line-height: 15px;
+        font-size: 15px;
+    }
+
+    &__item-temperature {
+        font-family: "Open Sans Condensed", sans-serif;
+        color: lightgray;
+        line-height: 30px;
+        font-size: 30px;
+    }
+
+    &__main {
+        display: flex;
+    }
+
+    &__item-wind {
+        font-family: "Open Sans Condensed", sans-serif;
+        color: lightgray;
+        line-height: 15px;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 700px) {
+    .weatherApp-list {
+        border: none;
+        background: rgb(185, 185, 185);
+        background: linear-gradient(0deg, rgba(185, 185, 185, 1) 0%, rgba(34, 34, 34, 1) 100%);
+        width: 100vw;
+        height: 20vh;
+    }
+}

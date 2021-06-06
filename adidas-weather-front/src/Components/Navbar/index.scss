@@ -1,0 +1,54 @@
+.navbar {
+    z-index: 2;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+
+    &-item {
+        font-family: "Open Sans Condensed", sans-serif;
+        letter-spacing: 3px;
+        font-weight: 700;
+        font-size: 15px;
+    }
+
+    &-image {
+        height: 50px;
+    }
+    &-mainLogo {
+        display: flex;
+        align-items: center;
+    }
+
+    p {
+        font-family: "Open Sans Condensed", sans-serif;
+        font-size: 2vw;
+    }
+}
+
+.navbar__list {
+    height: 10vh;
+    display: flex;
+    padding: 0;
+    list-style: none;
+    margin: 0;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+@media (max-width: 700px) {
+    .navbar {
+
+        &-item {
+            font-size: 10px;
+        }
+
+        &-image {
+            height: 30px;
+        }
+
+        p {
+            font-size: 15px;
+        }
+    }
+}

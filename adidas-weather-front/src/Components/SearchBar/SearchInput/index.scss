@@ -1,0 +1,29 @@
+@media (max-width: 700px) { 
+    .search-input {
+        font-family: 'Roboto', sans-serif;
+        color: #333;
+        font-size: 1.2rem;
+        border-radius: 0.2rem;
+        background-color: rgb(255, 255, 255);
+        border: none;
+        width: 60vw;
+        outline: none;
+        display: block;
+        transition: all 0.3s;
+    }
+}
+
+@media (min-width: 700px) { 
+    .search-input {
+        font-family: 'Roboto', sans-serif;
+        color: #333;
+        font-size: 1.2rem;
+        border-radius: 0.2rem;
+        background-color: rgb(255, 255, 255);
+        border: none;
+        width: 25vw;
+        outline: none;
+        display: block;
+        transition: all 0.3s;
+    }
+}
