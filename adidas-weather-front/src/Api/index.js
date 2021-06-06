@@ -10,7 +10,8 @@ const api = {
     },
 
     retrieveWeeklyWeatherByCity(city, country) {
-        return fetch(`${this.__url__}/forecast?city=${city}&country=${country}`)
+        //Date is hardcoded in order to use the Data is stored in mongo cluster
+        return fetch(`${this.__url__}/forecast?city=${city}&country=${country}&date=6/7/2021`)
             .then(res => res.json())
             .then(weeklyWeatherResponse =>
                 weeklyWeatherResponse.map(weatherData => {
