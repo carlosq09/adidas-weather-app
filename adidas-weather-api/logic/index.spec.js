@@ -69,7 +69,7 @@ describe('logic', () => {
             })
         })
 
-        describe('retrieve weather', () => {
+        describe('retrieve weekly weather', () => {
             let mainDate = Date.now()
             beforeEach(async () => {
                 for (let i = 0; i < 7; i++) {
@@ -87,15 +87,35 @@ describe('logic', () => {
 
             it('should retrieve on matching city', async () => {
                 const response = await logic.retrieveWeeklyWeather(mainDate, city)
-                const weatherData = await Weather.find()
 
-                expect(response).to.have.lengthOf(weatherData.length)
+                expect(response).to.have.lengthOf(7)
 
             })
             it('should return an empty array on not found city', async () => {
                 const response = await logic.retrieveWeeklyWeather(mainDate, 'noExisting-city')
 
                 expect(response).to.have.lengthOf(0)
+
+            })
+
+            afterEach(async () => await Weather.deleteMany())
+        })
+
+        describe('retrieve daily weather', () => {
+            it('should retrieve on matching city', async () => {
+                const weatherData = await logic.retrieveDailyWeatherByDate(date, city)
+
+                expect(weatherData).to.exist
+                expect(weatherData).to.have.lengthOf(1)
+
+                const [weather] = weatherData
+                expect(weather.city).to.equal(city)
+                expect(weather.country).to.equal(country)
+            })
+            it('should return an empty object on not found city', async () => {
+                const response = await logic.retrieveDailyWeatherByDate(mainDate, 'noExisting-city')
+
+                expect(response).to.be.equal({})
 
             })
 

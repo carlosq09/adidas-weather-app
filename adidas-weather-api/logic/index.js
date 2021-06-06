@@ -38,7 +38,7 @@ const logic = {
         })()
     },
 
-    retrieveDailyWeatherByDate(city, date) {
+    retrieveDailyWeatherByDate(date, city) {
 
     }
 }
