@@ -3,7 +3,7 @@ import { TiWeatherCloudy, TiWeatherSunny, TiWeatherDownpour, TiWeatherPartlySunn
 //Styles
 import './index.scss'
 
-const WeatherList = ({ forecastList, displayHourlyForecast, displayInMainIndicator, iconSise = 60 }) => {
+const WeatherList = ({  forecastList, displayHourlyForecast, displayInMainIndicator, iconSise = 60 }) => {
     return (
         <ul className="weatherApp-list">
             {forecastList && forecastList.map((forecast) => {

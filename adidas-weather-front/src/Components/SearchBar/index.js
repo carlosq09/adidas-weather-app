@@ -18,7 +18,11 @@ const SearchBar = ({ autocomplete, searchCity, itemList = [] }) => {
     return (
         <div className="search-bar">
             <SearchInput query={query} autocomplete={handleAutocomplete} />
-            {isSearching() && itemList.map(({ city, country }) => <SearchListItem onClick={() => searchCity(city, country)} searchCity={searchCity} place={`${city} , ${country}`} query={query} />)}
+            {isSearching() && itemList.map(({ city, country }) => <SearchListItem onClick={() => {
+                searchCity(city, country)
+                setQuery('')
+            }}
+                searchCity={searchCity} place={`${city} , ${country}`} query={query} />)}
         </div >
     );
 }

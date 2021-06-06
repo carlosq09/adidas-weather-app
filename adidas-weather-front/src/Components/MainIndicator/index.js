@@ -14,12 +14,12 @@ const MainIndicator = ({ forecast, location }) => {
                             case 'sunny':
                                 return <TiWeatherSunny size={200} color="lightgray" />
                             case 'windy':
-                                return <TiWeatherWindy />
+                                return <TiWeatherWindy size={200} />
                             case 'partly-cloudy':
-                                return <TiWeatherPartlySunny />
+                                return <TiWeatherPartlySunny size={200} />
                             case 'rainy':
-                                return <TiWeatherDownpour />
-                            default: return <TiWeatherSunny />
+                                return <TiWeatherDownpour size={200} />
+                            default: return <TiWeatherSunny size={200} />
                         }
                     })()}
                 </div>
